@@ -1,0 +1,3 @@
+export PATH=`pwd`/lib/fib:$PATH
+export PYTHONPATH=`pwd`/lib/fib:$PYTHONPATH
+echo "Python search path $PYTHONPATH" 
