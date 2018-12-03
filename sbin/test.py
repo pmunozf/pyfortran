@@ -16,7 +16,6 @@ print()
 
 # Use matrix multiplication
 N = 100
-
 A = np.eye(N)
 B = np.random.rand(N, N)
 
@@ -28,14 +27,4 @@ if not np.testing.assert_array_equal(matmul(A, B, N, N, N), B):
 
 if not np.testing.assert_array_equal(matmul(A, B), B):
     print('FORTRAN matrix multiplication implicit dimension test ok')
-
-
-
-
-
-
-
-
-
-
 
