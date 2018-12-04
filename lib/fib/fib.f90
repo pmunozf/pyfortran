@@ -65,5 +65,31 @@ C       """Matrix transposition."""
         END
 
 
+        SUBROUTINE getshape1(A, N1, N2, X1, X2)
+C       """Get matrix dimensions."""
+
+            INTEGER(kind=4), intent(in) :: N1, N2
+            INTEGER(kind=4), intent(out) :: X1, X2
+            REAL(kind=8), dimension(N1, N2), intent(in) :: A
+
+            X1 = N1
+            X2 = N2
+
+        END
+
+
+        SUBROUTINE getshape2(A, N1, N2, X1, X2)
+C       """Get matrix dimensions."""
+
+            INTEGER(kind=4), intent(in) :: N1, N2
+            INTEGER(kind=4), intent(out) :: X1, X2
+            REAL(kind=8), dimension(N1, N2), intent(in) :: A
+
+            X1 = N2
+            X2 = N1
+
+        END
+
+
 
 C END FILE fib.f90
