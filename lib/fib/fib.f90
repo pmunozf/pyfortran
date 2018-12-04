@@ -47,4 +47,23 @@ C       """Matrix product."""
         END
 
 
+        SUBROUTINE transpose(A, B, N1, N2)
+C       """Matrix transposition."""
+
+            INTEGER(kind=4), intent(in) :: N1, N2
+            REAL(kind=8), dimension(N1, N2), intent(in)  :: A
+            REAL(kind=8), dimension(N2, N1), intent(out) :: B
+
+            INTEGER :: i, j
+            B = 0
+
+            DO i = 1, N1
+                DO j = 1, N2
+                    B(j, i) = A(i, j)
+                ENDDO
+            ENDDO
+        END
+
+
+
 C END FILE fib.f90
